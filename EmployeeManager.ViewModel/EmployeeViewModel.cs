@@ -29,19 +29,18 @@ namespace EmployeeManager.ViewModel
             }
         }
 
-        public int JobRoleId
+        public DateTimeOffset EntryDate
         {
-            get { return _employee.JobRoleId; }
+            get { return _employee.EntryDate; }
             set
             {
-                if (_employee.JobRoleId != value)
+                if (_employee.EntryDate != value)
                 {
-                    _employee.JobRoleId = value;
+                    _employee.EntryDate = value;
                     RaisePropertyChanged();
                 }
             }
         }
-
         public bool IsCoffeeDrinker
         {
             get { return _employee.IsCoffeeDrinker; }
@@ -55,7 +54,20 @@ namespace EmployeeManager.ViewModel
             }
         }
 
-        public bool CanSave() => !string.IsNullOrEmpty(FirstName);
+        public int JobRoleId
+        {
+            get { return _employee.JobRoleId; }
+            set
+            {
+                if (_employee.JobRoleId != value)
+                {
+                    _employee.JobRoleId = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
+        public bool CanSave => !string.IsNullOrEmpty(FirstName);
 
         public void Save()
         {
