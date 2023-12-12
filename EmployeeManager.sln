@@ -9,9 +9,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.Common", "E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libraries", "Libraries", "{DD912DD1-7B66-4245-BD63-C01207561341}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.WinUI", "EmployeeManager.WinUI\EmployeeManager.WinUI.csproj", "{88E03EEE-867C-45CF-9163-ACA8D3D434FA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.WinUI", "EmployeeManager.WinUI\EmployeeManager.WinUI.csproj", "{88E03EEE-867C-45CF-9163-ACA8D3D434FA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.ViewModel", "EmployeeManager.ViewModel\EmployeeManager.ViewModel.csproj", "{5BAA345B-8B25-4E78-8FED-E329DA2BB0BF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmployeeManager.ViewModel", "EmployeeManager.ViewModel\EmployeeManager.ViewModel.csproj", "{5BAA345B-8B25-4E78-8FED-E329DA2BB0BF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WinUI", "WinUI", "{BE765C08-AEC0-4436-B554-1D69EBAD47DC}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WPF", "WPF", "{6AC7C706-477C-4518-A809-CD616855FD5E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmployeeManager.Wpf", "EmployeeManager.Wpf\EmployeeManager.Wpf.csproj", "{CC4DB708-1563-4400-BA07-6A9E8844E8EC}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -97,6 +103,22 @@ Global
 		{5BAA345B-8B25-4E78-8FED-E329DA2BB0BF}.Release|x64.Build.0 = Release|Any CPU
 		{5BAA345B-8B25-4E78-8FED-E329DA2BB0BF}.Release|x86.ActiveCfg = Release|Any CPU
 		{5BAA345B-8B25-4E78-8FED-E329DA2BB0BF}.Release|x86.Build.0 = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|arm64.ActiveCfg = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|arm64.Build.0 = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|x64.Build.0 = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Debug|x86.Build.0 = Debug|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|arm64.ActiveCfg = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|arm64.Build.0 = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|x64.ActiveCfg = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|x64.Build.0 = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|x86.ActiveCfg = Release|Any CPU
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -104,7 +126,9 @@ Global
 	GlobalSection(NestedProjects) = preSolution
 		{A425173A-C3F9-4251-AFF9-7E95BD7B4BBA} = {DD912DD1-7B66-4245-BD63-C01207561341}
 		{A4D5CF54-E102-45EE-A686-030D64246202} = {DD912DD1-7B66-4245-BD63-C01207561341}
+		{88E03EEE-867C-45CF-9163-ACA8D3D434FA} = {BE765C08-AEC0-4436-B554-1D69EBAD47DC}
 		{5BAA345B-8B25-4E78-8FED-E329DA2BB0BF} = {DD912DD1-7B66-4245-BD63-C01207561341}
+		{CC4DB708-1563-4400-BA07-6A9E8844E8EC} = {6AC7C706-477C-4518-A809-CD616855FD5E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8D719E33-FCFD-4644-95C9-2842C22D405F}

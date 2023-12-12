@@ -1,5 +1,6 @@
 ﻿using EmployeeManager.Common.DataProvider;
 using EmployeeManager.Common.Model;
+using EmployeeManager.ViewModel.Command;
 using System.Collections.ObjectModel;
 
 namespace EmployeeManager.ViewModel
@@ -9,10 +10,15 @@ namespace EmployeeManager.ViewModel
         private EmployeeViewModel? _selectedEmployee;
         private readonly IEmployeeDataProvider _employeeDataProvider;
 
+
         public MainViewModel(IEmployeeDataProvider employeeDataProvider)
         {
             _employeeDataProvider = employeeDataProvider;
+            LoadCommand = new DelegateCommand(Load);
         }
+
+        public DelegateCommand LoadCommand { get; private set; }
+
         public ObservableCollection<EmployeeViewModel> Employees { get; } = new();
         public ObservableCollection<JobRole> JobRoles { get; } = new();
 

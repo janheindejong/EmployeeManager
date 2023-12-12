@@ -1,5 +1,6 @@
 ﻿using EmployeeManager.Common.DataProvider;
 using EmployeeManager.Common.Model;
+using EmployeeManager.ViewModel.Command;
 
 namespace EmployeeManager.ViewModel
 {
@@ -8,12 +9,15 @@ namespace EmployeeManager.ViewModel
         private readonly Employee _employee;
         private readonly IEmployeeDataProvider _employeeDataProvider;
 
+
         public EmployeeViewModel(Employee employee, IEmployeeDataProvider employeeDataProvider)
         {
             _employee = employee;
             _employeeDataProvider = employeeDataProvider;
+            SaveCommand = new DelegateCommand(Save, () => CanSave);
         }
 
+        public DelegateCommand SaveCommand { get; private set; }
 
         public string FirstName
         {
@@ -25,6 +29,7 @@ namespace EmployeeManager.ViewModel
                     _employee.FirstName = value;
                     RaisePropertyChanged();
                     RaisePropertyChanged(nameof(CanSave));
+                    SaveCommand.RaiseCanExecuteChanged();
                 }
             }
         }
@@ -41,6 +46,20 @@ namespace EmployeeManager.ViewModel
                 }
             }
         }
+
+        public DateTime EntryDateTime
+        {
+            get { return _employee.EntryDate.DateTime; }
+            set
+            {
+                if (_employee.EntryDate != value)
+                {
+                    _employee.EntryDate = value;
+                    RaisePropertyChanged();
+                }
+            }
+        }
+
         public bool IsCoffeeDrinker
         {
             get { return _employee.IsCoffeeDrinker; }
@@ -73,7 +92,5 @@ namespace EmployeeManager.ViewModel
         {
             _employeeDataProvider.SaveEmployee(_employee);
         }
-
-
     }
 }
